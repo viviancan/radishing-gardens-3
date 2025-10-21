@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radishing Gardens - Expert Garden Consulting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'radish': {
+                            50: '#fef2f3',
+                            100: '#fde6e7',
+                            200: '#fbd0d5',
+                            300: '#f7aab2',
+                            400: '#f27a8a',
+                            500: '#e63950',
+                            600: '#d31e3c',
+                            700: '#b31532',
+                            800: '#95152f',
+                            900: '#7e152c',
+                        },
+                        'garden': {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        'earth': {
+                            50: '#fefce8',
+                            100: '#fef9c3',
+                            200: '#fef08a',
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            700: '#a16207',
+                            800: '#854d0e',
+                            900: '#713f12',
+                        }
+                    },
+                    fontFamily: {
+                        'display': ['Georgia', 'serif'],
+                        'body': ['system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+            .radish-gradient {
+                background: linear-gradient(135deg, #e63950 0%, #f27a8a 100%);
+            }
+            .garden-gradient {
+                background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
+            }
+            .earth-gradient {
+                background: linear-gradient(135deg, #eab308 0%, #fde047 100%);
+            }
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-2">
+                    <div class="w-12 h-12 bg-radish-500 rounded-full flex items-center justify-center transform rotate-12">
+                        <span class="text-2xl">🌱</span>
+                    </div>
+                    <h1 class="font-display text-2xl md:text-3xl font-bold text-garden-700">
+                        Radishing Gardens
+                    </h1>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-garden-600 font-medium transition-colors">Home</a>
+                    <a href="#services" class="text-gray-700 hover:text-garden-600 font-medium transition-colors">Services</a>
+                    <a href="#about" class="text-gray-700 hover:text-garden-600 font-medium transition-colors">About</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-garden-600 font-medium transition-colors">Portfolio</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-garden-600 font-medium transition-colors">Testimonials</a>
+                    <a href="#contact" class="bg-radish-500 text-white px-6 py-2 rounded-full hover:bg-radish-600 transition-all transform hover:scale-105">
+                        Contact Us
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-garden-600 focus:outline-none">
+                    <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#home" class="block text-gray-700 hover:text-garden-600 font-medium py-2">Home</a>
+                <a href="#services" class="block text-gray-700 hover:text-garden-600 font-medium py-2">Services</a>
+                <a href="#about" class="block text-gray-700 hover:text-garden-600 font-medium py-2">About</a>
+                <a href="#portfolio" class="block text-gray-700 hover:text-garden-600 font-medium py-2">Portfolio</a>
+                <a href="#testimonials" class="block text-gray-700 hover:text-garden-600 font-medium py-2">Testimonials</a>
+                <a href="#contact" class="block bg-radish-500 text-white px-6 py-3 rounded-full text-center hover:bg-radish-600">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 min-h-screen flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=2340&auto=format&fit=crop"
+                 alt="Beautiful vegetable garden"
+                 class="w-full h-full object-cover opacity-30">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="inline-block">
+                        <span class="bg-earth-200 text-earth-800 px-4 py-2 rounded-full text-sm font-semibold inline-flex items-center space-x-2 transform -rotate-2">
+                            <span>🥕</span>
+                            <span>Growing Dreams Since 2015</span>
+                        </span>
+                    </div>
+
+                    <h2 class="font-display text-5xl md:text-7xl font-bold text-gray-900 leading-tight">
+                        Your Garden's
+                        <span class="text-garden-600"> Best Friend</span>
+                    </h2>
+
+                    <p class="text-xl md:text-2xl text-gray-600 leading-relaxed">
+                        Expert consulting to transform your outdoor space into a thriving, beautiful garden paradise
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-radish-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-radish-600 transition-all transform hover:scale-105 shadow-lg text-center">
+                            Get Started Today
+                        </a>
+                        <a href="#portfolio" class="bg-white text-garden-700 px-8 py-4 rounded-full text-lg font-semibold border-2 border-garden-500 hover:bg-garden-50 transition-all text-center">
+                            View Our Work
+                        </a>
+                    </div>
+
+                    <div class="flex items-center space-x-8 pt-4">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-garden-600">500+</div>
+                            <div class="text-sm text-gray-600">Happy Gardens</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-radish-500">10+</div>
+                            <div class="text-sm text-gray-600">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-earth-500">100%</div>
+                            <div class="text-sm text-gray-600">Organic Methods</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?q=80&w=2340&auto=format&fit=crop"
+                             alt="Vibrant vegetable garden"
+                             class="w-full h-auto">
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 w-64 h-64 bg-garden-200 rounded-full opacity-50 blur-3xl"></div>
+                    <div class="absolute -top-4 -left-4 w-64 h-64 bg-radish-200 rounded-full opacity-50 blur-3xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gradient-to-b from-white to-garden-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-block mb-4">
+                    <span class="bg-radish-100 text-radish-700 px-4 py-2 rounded-full text-sm font-semibold">
+                        What We Offer
+                    </span>
+                </div>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Our Services
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    From soil to harvest, we're with you every step of the way
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border-t-4 border-garden-500">
+                    <div class="w-16 h-16 bg-garden-100 rounded-2xl flex items-center justify-center mb-6 transform -rotate-6">
+                        <span class="text-4xl">🌿</span>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-4">Garden Design</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Custom garden layouts tailored to your space, climate, and goals. We'll help you maximize yield and beauty.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center space-x-2">
+                            <span class="text-garden-500">✓</span>
+                            <span>Site analysis & planning</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-garden-500">✓</span>
+                            <span>Companion planting strategies</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-garden-500">✓</span>
+                            <span>Seasonal planting schedules</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border-t-4 border-radish-500">
+                    <div class="w-16 h-16 bg-radish-100 rounded-2xl flex items-center justify-center mb-6 transform rotate-6">
+                        <span class="text-4xl">🥬</span>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-4">Soil Health</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Healthy soil is the foundation of a thriving garden. We'll test and optimize your soil composition.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center space-x-2">
+                            <span class="text-radish-500">✓</span>
+                            <span>Professional soil testing</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-radish-500">✓</span>
+                            <span>Organic amendment plans</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-radish-500">✓</span>
+                            <span>Composting consultation</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border-t-4 border-earth-500">
+                    <div class="w-16 h-16 bg-earth-100 rounded-2xl flex items-center justify-center mb-6 transform -rotate-3">
+                        <span class="text-4xl">🍅</span>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-4">Pest Management</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Natural, organic solutions to keep your garden healthy without harmful chemicals.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center space-x-2">
+                            <span class="text-earth-500">✓</span>
+                            <span>Integrated pest management</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-earth-500">✓</span>
+                            <span>Beneficial insect strategies</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-earth-500">✓</span>
+                            <span>Disease prevention plans</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border-t-4 border-garden-500">
+                    <div class="w-16 h-16 bg-garden-100 rounded-2xl flex items-center justify-center mb-6 transform rotate-12">
+                        <span class="text-4xl">💧</span>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-4">Water Systems</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Efficient irrigation solutions that save water and keep your plants perfectly hydrated.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center space-x-2">
+                            <span class="text-garden-500">✓</span>
+                            <span>Drip irrigation design</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-garden-500">✓</span>
+                            <span>Rainwater harvesting</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-garden-500">✓</span>
+                            <span>Water conservation strategies</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border-t-4 border-radish-500">
+                    <div class="w-16 h-16 bg-radish-100 rounded-2xl flex items-center justify-center mb-6 transform -rotate-6">
+                        <span class="text-4xl">🌻</span>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-4">Seasonal Support</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Year-round guidance to keep your garden productive through every season.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center space-x-2">
+                            <span class="text-radish-500">✓</span>
+                            <span>Spring startup plans</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-radish-500">✓</span>
+                            <span>Fall preparation & cover crops</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-radish-500">✓</span>
+                            <span>Winter planning sessions</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border-t-4 border-earth-500">
+                    <div class="w-16 h-16 bg-earth-100 rounded-2xl flex items-center justify-center mb-6 transform rotate-3">
+                        <span class="text-4xl">📚</span>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-4">Education & Workshops</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Learn to be a confident gardener with our hands-on workshops and personalized training.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center space-x-2">
+                            <span class="text-earth-500">✓</span>
+                            <span>One-on-one coaching</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-earth-500">✓</span>
+                            <span>Group workshops</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-earth-500">✓</span>
+                            <span>Custom growing guides</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative order-2 md:order-1">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform">
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=2340&auto=format&fit=crop"
+                                 alt="Fresh tomatoes"
+                                 class="w-full h-64 object-cover">
+                        </div>
+                        <div class="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform mt-8">
+                            <img src="https://images.unsplash.com/photo-1590682680588-4bae6c616917?q=80&w=2340&auto=format&fit=crop"
+                                 alt="Lettuce garden"
+                                 class="w-full h-64 object-cover">
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-white rounded-2xl shadow-xl p-6 max-w-sm">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-garden-500 rounded-full flex items-center justify-center">
+                                <span class="text-2xl">🏆</span>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-900">Award Winning</div>
+                                <div class="text-sm text-gray-600">Best Garden Consultant 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6 order-1 md:order-2">
+                    <div class="inline-block">
+                        <span class="bg-garden-100 text-garden-700 px-4 py-2 rounded-full text-sm font-semibold">
+                            About Us
+                        </span>
+                    </div>
+
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900">
+                        Passionate About
+                        <span class="text-garden-600">Growing Together</span>
+                    </h2>
+
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Founded in 2015 by master gardener Sarah Thompson, Radishing Gardens was born from a simple belief:
+                        everyone deserves access to fresh, homegrown vegetables and the joy that comes from nurturing a garden.
+                    </p>
+
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        What started as helping neighbors with their backyard plots has blossomed into a full-service consulting
+                        business serving over 500 gardens across the region. We combine scientific expertise with a playful,
+                        hands-on approach to make gardening accessible and fun for everyone.
+                    </p>
+
+                    <div class="bg-garden-50 border-l-4 border-garden-500 p-6 rounded-r-xl">
+                        <p class="text-gray-700 italic font-display text-lg">
+                            "Our mission is simple: help people grow food, build community, and reconnect with nature—one radish at a time."
+                        </p>
+                        <p class="text-garden-700 font-semibold mt-2">— Sarah Thompson, Founder</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-radish-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-xl">✓</span>
+                            </div>
+                            <span class="text-gray-700 font-medium">Certified Organic</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-radish-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-xl">✓</span>
+                            </div>
+                            <span class="text-gray-700 font-medium">Eco-Friendly</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-radish-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-xl">✓</span>
+                            </div>
+                            <span class="text-gray-700 font-medium">Local Focus</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-radish-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-xl">✓</span>
+                            </div>
+                            <span class="text-gray-700 font-medium">Expert Team</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gradient-to-b from-white to-earth-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-block mb-4">
+                    <span class="bg-earth-100 text-earth-700 px-4 py-2 rounded-full text-sm font-semibold">
+                        Our Work
+                    </span>
+                </div>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Garden Transformations
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    See how we've helped gardens flourish across our community
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=2340&auto=format&fit=crop"
+                         alt="Urban balcony garden"
+                         class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="font-display text-2xl font-bold mb-2">Urban Balcony Oasis</h3>
+                            <p class="text-sm mb-3">Transformed a small city balcony into a productive herb and vegetable garden</p>
+                            <div class="flex space-x-2">
+                                <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs">Container Garden</span>
+                                <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs">Urban</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=2340&auto=format&fit=crop"
+                         alt="Backyard vegetable garden"
+                         class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="font-display text-2xl font-bold mb-2">Suburban Paradise</h3>
+                            <p class="text-sm mb-3">Full backyard transformation with raised beds and companion planting</p>
+                            <div class="flex space-x-2">
+                                <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs">Raised Beds</span>
+                                <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs">Full Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1592419044706-39796d40f98c?q=80&w=2340&auto=format&fit=crop"
+                         alt="Community garden plot"
+                         class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="font-display text-2xl font-bold mb-2">Community Garden</h3>
+                            <p class="text-sm mb-3">Designed and implemented a thriving community garden space</p>
+                            <div class="flex space-x-2">
+                                <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs">Community</span>
+                                <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs">Large Scale</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2340&auto=format&fit=crop"
+                         alt="Greenhouse garden"
+                         class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="font-display text-2xl font-bold mb-2">Greenhouse Haven</h3>
+                            <p class="text-sm mb-3">Year-round growing system with climate control and vertical gardening</p>
+                            <div class="flex space-x-2">
+                                <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs">Greenhouse</span>
+                                <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs">Advanced</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1595855759920-86582396756a?q=80&w=2340&auto=format&fit=crop"
+                         alt="Vegetable rows"
+                         class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="font-display text-2xl font-bold mb-2">Market Garden</h3>
+                            <p class="text-sm mb-3">Commercial-scale vegetable production for local farmers market</p>
+                            <div class="flex space-x-2">
+                                <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs">Commercial</span>
+                                <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs">Production</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2340&auto=format&fit=crop"
+                         alt="Herb garden"
+                         class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="font-display text-2xl font-bold mb-2">Culinary Herb Garden</h3>
+                            <p class="text-sm mb-3">Designed a beautiful and functional kitchen herb garden</p>
+                            <div class="flex space-x-2">
+                                <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs">Herbs</span>
+                                <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs">Culinary</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-block mb-4">
+                    <span class="bg-radish-100 text-radish-700 px-4 py-2 rounded-full text-sm font-semibold">
+                        Testimonials
+                    </span>
+                </div>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    What Our Clients Say
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Don't just take our word for it—hear from our happy gardeners
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gradient-to-br from-garden-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-garden-100">
+                    <div class="flex items-center space-x-1 mb-4">
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">
+                        "Sarah transformed my sad little backyard into an absolute paradise! I'm now harvesting more vegetables than I can eat. Her expertise and genuine passion made the whole process fun and educational."
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-garden-200 rounded-full flex items-center justify-center text-2xl">
+                            👩
+                        </div>
+                        <div>
+                            <div class="font-bold text-gray-900">Maria Rodriguez</div>
+                            <div class="text-sm text-gray-600">Homeowner, Portland</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gradient-to-br from-radish-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-radish-100">
+                    <div class="flex items-center space-x-1 mb-4">
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">
+                        "As a complete beginner, I was intimidated by gardening. The Radishing Gardens team made it approachable and exciting. Three years later, I'm teaching my own workshops thanks to their mentorship!"
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-radish-200 rounded-full flex items-center justify-center text-2xl">
+                            👨
+                        </div>
+                        <div>
+                            <div class="font-bold text-gray-900">James Chen</div>
+                            <div class="text-sm text-gray-600">Urban Gardener, Seattle</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gradient-to-br from-earth-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-earth-100">
+                    <div class="flex items-center space-x-1 mb-4">
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">
+                        "Our school garden has become the heart of our campus thanks to Radishing Gardens. They designed a space that's beautiful, educational, and actually produces food for our cafeteria. Amazing!"
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-earth-200 rounded-full flex items-center justify-center text-2xl">
+                            👩‍🏫
+                        </div>
+                        <div>
+                            <div class="font-bold text-gray-900">Patricia Williams</div>
+                            <div class="text-sm text-gray-600">Principal, Lincoln Elementary</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Testimonials Row -->
+            <div class="grid md:grid-cols-2 gap-8 mt-8 max-w-4xl mx-auto">
+                <!-- Testimonial 4 -->
+                <div class="bg-gradient-to-br from-garden-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-garden-100">
+                    <div class="flex items-center space-x-1 mb-4">
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">
+                        "The soil testing and amendment plan saved my garden. After years of poor yields, I finally understand what my plants need. Best investment I've made!"
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-garden-200 rounded-full flex items-center justify-center text-2xl">
+                            👨‍🌾
+                        </div>
+                        <div>
+                            <div class="font-bold text-gray-900">Robert Taylor</div>
+                            <div class="text-sm text-gray-600">Home Gardener, Tacoma</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="bg-gradient-to-br from-radish-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-radish-100">
+                    <div class="flex items-center space-x-1 mb-4">
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                        <span class="text-earth-400 text-2xl">★</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">
+                        "Professional, knowledgeable, and so much fun to work with! They turned my tiny balcony into a productive container garden. I love my little urban farm!"
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-radish-200 rounded-full flex items-center justify-center text-2xl">
+                            👩‍💼
+                        </div>
+                        <div>
+                            <div class="font-bold text-gray-900">Emily Nguyen</div>
+                            <div class="text-sm text-gray-600">Apartment Dweller, Vancouver</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-garden-50 via-white to-radish-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-block mb-4">
+                    <span class="bg-garden-100 text-garden-700 px-4 py-2 rounded-full text-sm font-semibold">
+                        Get In Touch
+                    </span>
+                </div>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Let's Grow Together
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Ready to transform your garden? Drop us a line and let's start planning your dream garden today!
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-10">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Your Name *</label>
+                            <input type="text"
+                                   id="name"
+                                   name="name"
+                                   required
+                                   class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-garden-500 focus:ring-2 focus:ring-garden-200 transition-all outline-none"
+                                   placeholder="John Doe">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
+                            <input type="email"
+                                   id="email"
+                                   name="email"
+                                   required
+                                   class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-garden-500 focus:ring-2 focus:ring-garden-200 transition-all outline-none"
+                                   placeholder="john@example.com">
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel"
+                                   id="phone"
+                                   name="phone"
+                                   class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-garden-500 focus:ring-2 focus:ring-garden-200 transition-all outline-none"
+                                   placeholder="(555) 123-4567">
+                        </div>
+
+                        <div>
+                            <label for="service" class="block text-sm font-semibold text-gray-700 mb-2">Service Interested In *</label>
+                            <select id="service"
+                                    name="service"
+                                    required
+                                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-garden-500 focus:ring-2 focus:ring-garden-200 transition-all outline-none">
+                                <option value="">Select a service...</option>
+                                <option value="garden-design">Garden Design</option>
+                                <option value="soil-health">Soil Health</option>
+                                <option value="pest-management">Pest Management</option>
+                                <option value="water-systems">Water Systems</option>
+                                <option value="seasonal-support">Seasonal Support</option>
+                                <option value="workshops">Education & Workshops</option>
+                                <option value="other">Other / Not Sure</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Tell Us About Your Garden *</label>
+                            <textarea id="message"
+                                      name="message"
+                                      required
+                                      rows="5"
+                                      class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-garden-500 focus:ring-2 focus:ring-garden-200 transition-all outline-none resize-none"
+                                      placeholder="What are your garden goals? What challenges are you facing?"></textarea>
+                        </div>
+
+                        <button type="submit"
+                                class="w-full bg-radish-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-radish-600 transition-all transform hover:scale-105 shadow-lg">
+                            Send Message 🌱
+                        </button>
+
+                        <p id="form-status" class="text-center text-sm font-medium hidden"></p>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <h3 class="font-display text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-garden-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="text-2xl">📍</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Visit Us</div>
+                                    <div class="text-gray-600">123 Garden Lane<br>Portland, OR 97201</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-radish-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="text-2xl">📞</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Call Us</div>
+                                    <div class="text-gray-600">(555) GARDEN-1<br>Mon-Fri: 9am - 5pm</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-earth-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="text-2xl">✉️</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Email Us</div>
+                                    <div class="text-gray-600">hello@radishinggardens.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-garden-500 to-garden-600 rounded-2xl shadow-lg p-8 text-white">
+                        <h3 class="font-display text-2xl font-bold mb-4">Free Consultation</h3>
+                        <p class="mb-6 leading-relaxed">
+                            Not sure where to start? Book a free 30-minute consultation and we'll help you create a roadmap for your garden success!
+                        </p>
+                        <a href="#contact" class="inline-block bg-white text-garden-700 px-6 py-3 rounded-full font-semibold hover:bg-garden-50 transition-all">
+                            Book Now
+                        </a>
+                    </div>
+
+                    <div class="bg-earth-50 rounded-2xl border-2 border-earth-200 p-8">
+                        <h3 class="font-display text-xl font-bold text-gray-900 mb-4">Office Hours</h3>
+                        <div class="space-y-2 text-gray-700">
+                            <div class="flex justify-between">
+                                <span class="font-medium">Monday - Friday</span>
+                                <span>9:00 AM - 5:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-medium">Saturday</span>
+                                <span>10:00 AM - 3:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-medium">Sunday</span>
+                                <span>Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-radish-500 rounded-full flex items-center justify-center transform rotate-12">
+                            <span class="text-xl">🌱</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold">Radishing Gardens</h3>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Growing dreams, one garden at a time since 2015.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#services" class="text-gray-400 hover:text-garden-400 transition-colors">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-garden-400 transition-colors">About Us</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-garden-400 transition-colors">Portfolio</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-garden-400 transition-colors">Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#services" class="text-gray-400 hover:text-garden-400 transition-colors">Garden Design</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-garden-400 transition-colors">Soil Testing</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-garden-400 transition-colors">Pest Management</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-garden-400 transition-colors">Workshops</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-garden-500 transition-colors">
+                            <span class="text-xl">📘</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-garden-500 transition-colors">
+                            <span class="text-xl">📷</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-garden-500 transition-colors">
+                            <span class="text-xl">🐦</span>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-4">
+                        📧 hello@radishinggardens.com<br>
+                        📞 (555) GARDEN-1
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 Radishing Gardens. All rights reserved. Made with ❤️ and 🥕</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="fixed bottom-8 right-8 w-14 h-14 bg-radish-500 text-white rounded-full shadow-lg hover:bg-radish-600 transition-all transform hover:scale-110 hidden items-center justify-center z-40">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        </svg>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll to Top Button
+        const scrollTopButton = document.getElementById('scroll-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopButton.classList.remove('hidden');
+                scrollTopButton.classList.add('flex');
+            } else {
+                scrollTopButton.classList.add('hidden');
+                scrollTopButton.classList.remove('flex');
+            }
+        });
+
+        scrollTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Contact Form Handling
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData.entries());
+
+            // Show loading state
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.innerHTML = 'Sending...';
+            submitButton.disabled = true;
+
+            // Simulate form submission (replace with actual API call)
+            setTimeout(() => {
+                // Success message
+                formStatus.textContent = '✓ Thank you! We\'ll be in touch soon to help your garden flourish!';
+                formStatus.classList.remove('hidden', 'text-red-600');
+                formStatus.classList.add('text-green-600');
+
+                // Reset form
+                contactForm.reset();
+
+                // Reset button
+                submitButton.innerHTML = originalButtonText;
+                submitButton.disabled = false;
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    formStatus.classList.add('hidden');
+                }, 5000);
+            }, 1500);
+
+            // For actual implementation, use:
+            /*
+            try {
+                const response = await fetch('YOUR_FORM_ENDPOINT', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                if (response.ok) {
+                    formStatus.textContent = '✓ Thank you! We\'ll be in touch soon to help your garden flourish!';
+                    formStatus.classList.remove('hidden', 'text-red-600');
+                    formStatus.classList.add('text-green-600');
+                    contactForm.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                formStatus.textContent = '✗ Oops! Something went wrong. Please try again or email us directly.';
+                formStatus.classList.remove('hidden', 'text-green-600');
+                formStatus.classList.add('text-red-600');
+            } finally {
+                submitButton.innerHTML = originalButtonText;
+                submitButton.disabled = false;
+            }
+            */
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
